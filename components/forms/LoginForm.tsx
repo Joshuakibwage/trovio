@@ -1,27 +1,28 @@
 "use client";
 import { useState } from "react";
 import { useAuthStore } from "@/store/authStore";
+import { useRouter } from "next/navigation";
 
 
 const LoginForm = () => {
 
     const { login } = useAuthStore();
+    const router = useRouter();
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault()
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
 
         try {
             await login(email, password);
-            window.location.href="/dashboard";
-
+            router.push("/dashboard");
         } catch {
             setError("Invalid email or password");
         }
-    }
+    };
 
 
 
@@ -34,6 +35,7 @@ const LoginForm = () => {
                 className="p-2 border rounded w-full"
                 value={email}
                 onchange={(e) => setEmail(e.target.value)}
+                required
             />
             
             <input 
@@ -42,6 +44,7 @@ const LoginForm = () => {
                 className="p-2 border rounded w-full"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                required
             />
 
             <button className="w-full bg-blue-600 text-white p-2 rounded">Login</button>
