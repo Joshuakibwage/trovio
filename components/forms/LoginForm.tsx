@@ -32,22 +32,24 @@ const LoginForm = () => {
             <input 
                 type="text" 
                 placeholder="Email"
-                className="p-2 border rounded w-full"
+                className="p-2 border border-black/30 rounded w-full bg-gray-100 placeholder:text-gray-500 text-black"
                 value={email}
-                onchange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
                 required
             />
             
             <input 
                 type="text" 
                 placeholder="password"
-                className="p-2 border rounded w-full"
+                className="p-2 border border-black/30 rounded w-full bg-gray-100 placeholder:text-gray-500 text-black"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
             />
 
-            <button className="w-full bg-blue-600 text-white p-2 rounded">Login</button>
+            <button className="w-full bg-blue-600 text-white p-2 rounded cursor-pointer">
+                Login
+            </button>
         </form>
     )
 }

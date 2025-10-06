@@ -30,31 +30,31 @@ const RegisterForm = () => {
             <input 
                 type="text" 
                 placeholder="Username..."
-                className="p-2 border rounded w-full"
+                className="p-2 border border-black/30 rounded w-full bg-gray-100 placeholder:text-gray-500 text-black"
                 value={form.username}
-                onChange={(e) = setForm({...form, username: e.target.value})}
+                onChange={(e) => setForm({...form, username: e.target.value})}
                 required
             />
 
             <input 
                 type="text" 
                 placeholder="email"
-                className="p-2 border rounded w-full"
+                className="p-2 border border-black/30 rounded w-full bg-gray-100 placeholder:text-gray-500 text-black"
                 value={form.email}
-                onchange={(e) => setForm({...form, email: e.target.value})}
+                onChange={(e) => setForm({...form, email: e.target.value})}
                 required
             />
 
             <input 
                 type="text"
                 placeholder="password"
-                className="p-2 border rounded w-full"
+                className="p-2 border border-black/30 rounded w-full bg-gray-100 placeholder:text-gray-500 text-black"
                 value={form.password}
                 onChange={(e) => setForm({...form, password: e.target.value})}
                 required
             />
 
-            <button className="w-full bg-green-600 text-white p-2 rounded">
+            <button className="w-full bg-green-600 text-white p-2 rounded cursor-pointer">
                 Register
             </button>
             {message && <p className="text-center text-gray-700">{message}</p>}
