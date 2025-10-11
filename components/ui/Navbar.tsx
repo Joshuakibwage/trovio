@@ -18,21 +18,21 @@ const Navbar = () => {
         
         <div className="flex gap-4">
           <Link href="/" className={`${
-              pathname === "/" ? "text-blue-600 border-b-2" : "text-gray-300"
+              pathname === "/" ? "text-blue-600 border-b-2" : "text-gray-600"
             } hover:text-blue-500`}
           >
             Home
           </Link>
 
           <Link href="/products" className={`${
-              pathname === "/products" ? "text-blue-600 border-b-2" : "text-gray-300"
+              pathname === "/products" ? "text-blue-600 border-b-2" : "text-gray-600"
             } hover:text-blue-500`}
           >
             Products
           </Link>
 
           <Link href="/about" className={`${
-              pathname === "/about" ? "text-blue-600 border-b-2" : "text-gray-300"
+              pathname === "/about" ? "text-blue-600 border-b-2" : "text-gray-600"
             } hover:text-blue-500`}
           >
             About
@@ -44,8 +44,11 @@ const Navbar = () => {
             Login
           </Link>
 
-          <Link href="/register" className="bg-blue-600 px-4 py-1 rounded-md hover:bg-blue-500 transition delay-200">
-             Signup
+          <Link 
+            href="/register" 
+            className="bg-blue-600 px-4 py-1 rounded-md hover:bg-blue-500 transition delay-200"
+          >
+            Signup
           </Link>
         </div>
       </div>
