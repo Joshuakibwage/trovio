@@ -1,4 +1,4 @@
-// lib/apiEndpoints.ts
+
 export const API_ENDPOINTS = {
   // AUTH
   REGISTER: "/accounts/register/",
