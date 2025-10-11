@@ -1,7 +1,7 @@
 
 import { create } from "zustand";
-import apiClient from "@/lib/apiClient";
-import { API_ENDPOINTS } from "@/lib/apiEndpoints";
+// import apiClient from "@/lib/apiClient";
+// import { API_ENDPOINTS } from "@/lib/apiEndpoints";
 
 interface Product {
     id: number;

@@ -1,8 +1,7 @@
 "use client";
-
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import SearchBar from "@/components/ui/SearchBar";
 
 
 const Navbar = () => {
@@ -38,6 +37,8 @@ const Navbar = () => {
             About
           </Link>
         </div>
+
+        <SearchBar />
 
         <div className="flex gap-4">
           <Link href="/login" className="border-1 px-4 py-1 rounded-md ">
