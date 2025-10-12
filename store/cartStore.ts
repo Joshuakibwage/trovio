@@ -74,6 +74,6 @@ export const useCartStore = create<CartState>()(
             return get().cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
         },
         }),
-        { name: "cart-storage" } // persists in localStorage
+        { name: "cart-storage" } 
     )
 );
