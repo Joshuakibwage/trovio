@@ -41,13 +41,13 @@ const Navbar = () => {
         <SearchBar />
 
         <div className="flex gap-4">
-          <Link href="/login" className="border-1 px-4 py-1 rounded-md ">
+          <Link href="/login" className="border border-gray-300 px-4 py-1 rounded-md ">
             Login
           </Link>
 
           <Link 
             href="/register" 
-            className="bg-blue-600 px-4 py-1 rounded-md hover:bg-blue-500 transition delay-200"
+            className="bg-blue-600 text-white px-4 py-1 rounded-md hover:bg-blue-500 transition delay-200"
           >
             Signup
           </Link>
